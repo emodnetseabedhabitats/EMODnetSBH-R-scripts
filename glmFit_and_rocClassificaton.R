@@ -1,6 +1,6 @@
 # the input file must contain
 # - a column 1 in which there are the values of the predictor variable
-# - a column 2 in which there are a code corresponding to the category (2 possible categories only, thus 2 codes only, which must be coded 0 and 1) 
+# - a column 2 in which there are codes corresponding to the category (2 possible categories only, thus 2 codes only, which must be coded 0 and 1) 
 
 # Convention: in the column 2 the code of the category in which there are the uppest values of comlumn 1 must be coded 1, while the category in which there are the lowest values of comlumn 1 will be coded 0
 # e.g. : in infralittoral values of light are upper than in circalittoral. Thus the code for infralittoral will have to be 1 and the code for circalittoral will be 0
