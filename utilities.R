@@ -1,4 +1,4 @@
-
+library(ROCR)
 
 removeOutliersForEachCategory <- function(dataframe,strCategoryFieldName,strValueFieldName, catUniqueValues) {
 	#For each category (given by column strCategoryFieldName), removes 
