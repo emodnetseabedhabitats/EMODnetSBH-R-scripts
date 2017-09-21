@@ -1,3 +1,12 @@
+###########################################################################
+# This script has been create for use in the EMODnet Seabed Habitats      #
+# habitat map ingestion process, enabling a user to separate concatenated #
+# values within a shapefile field into multiple features, to conform with #
+# EMODnet and INSPIRE standards.                                          #
+#                                                                         #
+# Created by Graeme Duncan, JNCC, UK.                                     #
+###########################################################################
+
 ###############################################################
 ### IF YOU WISH TO JUST RUN THE SCRIPT, CHANGE THESE VALUES ###
 ###############################################################
@@ -20,7 +29,7 @@ out_folder <- "D:/my_folder"
 ###                     THEN RUN ALL BELOW                  ###
 ###############################################################
 
-separate_mosaics <- function(input.dataset, fieldname = "ORIG_HAB",separator = "/"){
+separate_habitats <- function(input.dataset, fieldname = "ORIG_HAB",separator = "/"){
   library(sf)
   library(tidyr)  
   
@@ -52,7 +61,7 @@ separate_mosaics <- function(input.dataset, fieldname = "ORIG_HAB",separator = "
 }
 
 sf.dataset <- st_read(dsn=file_location, layer=file_name, stringsAsFactors = FALSE)
-output.dataset <- separate_mosaics(sf.dataset, fieldname=habitat_field, separator=separator)
+output.dataset <- separate_habitats(sf.dataset, fieldname=habitat_field, separator=separator)
 
 out_name <- paste("split_",file_name,sep="")
 if (!(file_ext(out_name) == "shp")){
