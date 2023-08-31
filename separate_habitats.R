@@ -27,7 +27,7 @@ file_name <- "GBxxxxxx_DEF_export"
 #For example, for mosaic "Sand+Mud", the separator would be "+"
 separator <- "/"
 #Change to the field name containing the habitat values that you would like to split (if required)
-habitat_field <- "ORIG_HAB"
+habitat_field <- "HAB_TYPE"
 
 #Change to the output folder where you want to save your shapefile, be sure to change the "\" to "/"
 out_location <- "Y:/folder_name/folder_name"
